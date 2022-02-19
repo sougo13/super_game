@@ -1,24 +1,21 @@
-import logo from './logo.svg';
+import { Card, CardBody, CardTitle, Col, Container } from 'reactstrap';
 import './App.css';
+import WhoLivesWhere from './whoLivesWhere';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container fluid className='p-3'>
+      <Card>
+        <CardTitle className='align-self-center'>
+          Mega Game
+        </CardTitle>
+        <CardBody>
+          <Col xl='12'>
+            <WhoLivesWhere />
+          </Col>
+        </CardBody>
+      </Card>
+    </Container>
   );
 }
 
