@@ -1,21 +1,37 @@
-import { Card, CardBody, CardTitle, Col, Container } from 'reactstrap';
-import './App.css';
+import { createContext, useState } from 'react';
+import { Card, CardBody, Col } from 'reactstrap';
+import Menu from './mainMenu';
 import WhoLivesWhere from './whoLivesWhere';
+import { Autor, Title } from './whoLivesWhere/styled';
+
+export const GameContext = createContext();
+
+const defaultContextValue = {
+  currentGameId: 0
+}
 
 function App() {
+
+  const [context, setContext] = useState(defaultContextValue);
+  console.log(context)
   return (
-    <Container fluid className='p-3'>
-      <Card>
-        <CardTitle className='align-self-center'>
-          Mega Game
-        </CardTitle>
+    <GameContext.Provider value={[context, setContext]}>
+      <div style={{width:'100%', height:'100%', backgroundImage: 'url(../photos/grass1.jpg)', backgroundSize: '100% 100%' }}>
         <CardBody>
           <Col xl='12'>
-            <WhoLivesWhere />
+            {context.currentGameId === 0 ? <Menu /> : null}
+            {context.currentGameId === 1 ? <Menu /> : null}
+            {context.currentGameId === 2 ? <WhoLivesWhere /> : null}
+            {context.currentGameId === 3 ? <Menu /> : null}
+            {context.currentGameId === 4 ? <Menu /> : null}
+            {context.currentGameId === 5 ? <Menu /> : null}
           </Col>
         </CardBody>
-      </Card>
-    </Container>
+        <Autor>
+          Автор игры: учитель-логопед Ковязина С. Е.
+        </Autor>
+      </div>
+    </GameContext.Provider>
   );
 }
 

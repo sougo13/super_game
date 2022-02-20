@@ -1,3 +1,4 @@
+import { Button } from "reactstrap";
 import styled from "styled-components";
 
 export const CardBlock = styled.div`
@@ -15,6 +16,16 @@ export const Text = styled.div`
   font-weight: bold;
 `
 
+export const Title = styled.div`
+  display: flex;
+  text-shadow: 4px 4px black;
+  color: white;
+  width: auto;
+  font-size: 60px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+`
+
 export const StyledImg = styled.img`
   width: 440px;
   height: 290px;
@@ -27,10 +38,18 @@ export const StyledImg = styled.img`
   :hover{
     transform: ${props => props.disabled ? 'none' : 'scale(1.05)'};
   }
+  @media(max-width: 1439px){
+    width: 352px;
+    height: 232px;
+  }
+  @media(max-width: 1200px){
+    width: 282px;
+    height: 186px;
+  }
 `
 
 export const EndMessage = styled.div`
-  font-size: 60px;
+  font-size: 70px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: bold;
   position: fixed;
@@ -38,6 +57,14 @@ export const EndMessage = styled.div`
   bottom: 300px;
   width: 300px;
   height: auto;
+  color: white;
+  text-shadow: 4px 4px black;
+  @media(max-width: 1439px){
+    width: 240px;
+  }
+  @media(max-width: 1200px){
+    width: 192px;
+  }
 `
 
 export const MiniMashaImg = styled.img`
@@ -46,6 +73,12 @@ export const MiniMashaImg = styled.img`
   bottom: 0;
   width: 300px;
   height: auto;
+  @media(max-width: 1439px){
+    width: 240px;
+  }
+  @media(max-width: 1200px){
+    width: 192px;
+  }
 `
 
 export const MashaImg = styled.img`
@@ -54,6 +87,31 @@ export const MashaImg = styled.img`
   bottom: 0;
   width: 300px;
   height: auto;
+  @media(max-width: 1439px){
+    width: 240px;
+    right: 90px;
+  }
+  @media(max-width: 1200px){
+    width: 192px;
+    right: 75px;
+  }
+`
+
+export const MashaMain = styled.img`
+  position: fixed;
+  right: -10px;
+  bottom: 0;
+  width: 650px;
+  height: auto;
+  @media(max-width: 1600px){
+    width: 550px;
+  }
+  @media(max-width: 1439px){
+    width: 450px;
+  }
+  @media(max-width: 1200px){
+    width: 350px;
+  }
 `
 
 export const AnswerImg = styled.img`
@@ -62,4 +120,44 @@ export const AnswerImg = styled.img`
   bottom: 250px;
   width: 250px;
   height: auto;
+  @media(max-width: 1439px){
+    width: 200px;
+    right: 0;
+  }
+  @media(max-width: 1200px){
+    width: 160px;
+  }
+`
+
+export const StyledButton = styled.button`
+  font-size: 50px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  background-color: white;
+  color: black;
+  width: 100%;
+  border: none;
+  margin-bottom: 35px;
+  border-radius: 25px;
+  :hover{
+    background-color: lightgreen;
+    color: black;
+  }
+  @media(max-width: 1439px){
+    font-size: 40px;
+  }
+  @media(max-width: 1200px){
+    font-size: 30px;
+  }
+`
+
+export const Autor = styled.div`
+  padding: 0 10px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+  font-size: 18px;
+  background-color: #878787b2;
 `

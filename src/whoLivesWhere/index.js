@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Card, CardBody, Col, Container, Label, Row } from 'reactstrap';
+import { Card, CardBody, Col, Container, Row } from 'reactstrap';
 import { animals1, animals2, places1, places2 } from '../data';
-import './style.css';
-import { AnswerImg, CardBlock, EndMessage, MashaImg, MiniMashaImg, StyledImg, Text } from './styled';
+import { AnswerImg, CardBlock, EndMessage, MashaImg, MiniMashaImg, StyledImg, Text, Title } from './styled';
 
 function shuffle(array) {
   let currentIndex = array.length, randomIndex;
@@ -100,16 +99,25 @@ const WhoLivesWhere = () => {
   }
 
   return (
-    <Container fluid>
-      <Card style={{ background: '#e0bcda83' }}>
+    <React.Fragment>
+      <Title style={{ width: 'fit-content', margin: 'auto' }}>
+        Кто, где живет?
+      </Title>
+      <Card style={{ background: '#fac5f1d5' }}>
         <CardBody >
           {stage === 3
-            ? <div style={{ display: 'flex', width: '100%', justifyContent: 'center' }}>
-              <img src='../photos/orig.gif' width='50%' />
-            </div>
-            : <Col xl='12'>
+            ? < React.Fragment>
+              <div style={{ display: 'flex', width: '100%', justifyContent: 'center' }}>
+                <img src='../photos/orig.gif' width='50%' />
+              </div>
+              <EndMessage>
+                Молодец!
+              </EndMessage>
+              <MiniMashaImg src='../photos/miniMasha.png' />
+            </React.Fragment>
+            : <Col sm='12'>
               <Row>
-                <Col xl='6'>
+                <Col sm='5'>
                   {allAnimals.map(animal => {
                     return (
                       <Row key={'animal' + animal.id} className='mb-3'>
@@ -138,7 +146,7 @@ const WhoLivesWhere = () => {
                   }
                   )}
                 </Col>
-                <Col xl='6'>
+                <Col sm='5'>
                   {allPlaces.map(place => {
                     return (
                       <Row key={'place' + place.id} className='mb-3'>
@@ -167,26 +175,24 @@ const WhoLivesWhere = () => {
                   }
                   )}
                 </Col>
+                <Col lg='2'>
+                  {masha
+                    ? <MashaImg src='../photos/masha.png' />
+                    : <MiniMashaImg src='../photos/miniMasha.png' />}
+                  {
+                    masha
+                      ? answerType
+                        ? <AnswerImg src='../photos/ok.png' />
+                        : <AnswerImg src='../photos/wrong.png' />
+                      : null
+                  }
+                </Col>
               </Row>
             </Col>
           }
         </CardBody>
       </Card>
-      {masha
-        ? <MashaImg src='../photos/masha.png' />
-        : <MiniMashaImg src='../photos/miniMasha.png' />}
-      {
-        masha
-          ? answerType
-            ? <AnswerImg src='../photos/ok.png' />
-            : <AnswerImg src='../photos/wrong.png' />
-          : null
-      }
-      {stage === 3 &&
-        <EndMessage>
-          Молодец!!!
-        </EndMessage>}
-    </Container>
+    </React.Fragment>
   )
 }
 
