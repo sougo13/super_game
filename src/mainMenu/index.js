@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Card, CardBody, Col, Container, Row } from 'reactstrap'
 import { GameContext } from '../App';
-import { CardBlock, MashaMain, StyledButton, Title } from '../whoLivesWhere/styled'
+import { CardBlock, MashaMain, StyledButton, Title } from '../styled'
 
 const Menu = () => {
 

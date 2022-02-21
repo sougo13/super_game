@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Card, CardBody, Col, Row } from 'reactstrap';
-import { animals1, animals2, places1, places2 } from '../data';
+import { animals1, animals2, footprints1, footprints2 } from '../data';
 import { AnswerImg, CardBlock, EndMessage, MashaImg, MiniMashaImg, StyledImg, Text, Title } from '../styled';
 
 function shuffle(array) {
@@ -18,12 +18,12 @@ function shuffle(array) {
   return array;
 }
 
-const WhoLivesWhere = () => {
+const WhoseFootprints = () => {
 
   const [allAnimals, setAllAnimals] = useState(animals1);
-  const [allPlaces, setAllPlaces] = useState(places1);
+  const [allFootprints, setAllFootprints] = useState(footprints1);
   const [correctAnimals, setCorrectAnimals] = useState([]);
-  const [correctPlaces, setCorrectPlaces] = useState([]);
+  const [correctFootprints, setCorrectFootprints] = useState([]);
   const [currentAnimal, setCurrentAnimal] = useState(0);
   const [currentPlace, setCurrentPlace] = useState(0);
   const [stage, setStage] = useState(1);
@@ -44,11 +44,11 @@ const WhoLivesWhere = () => {
       let newAnimals = [...animals2];
       newAnimals = shuffle(newAnimals);
       setAllAnimals(newAnimals);
-      let newPlaces = [...places2];
-      newPlaces = shuffle(newPlaces);
-      setAllPlaces(newPlaces);
+      let newFootprints = [...footprints2];
+      newFootprints = shuffle(newFootprints);
+      setAllFootprints(newFootprints);
       setCorrectAnimals([]);
-      setCorrectPlaces([]);
+      setCorrectFootprints([]);
       setCurrentAnimal(0);
       setCurrentPlace(0);
     }
@@ -56,9 +56,9 @@ const WhoLivesWhere = () => {
       let newAnimals = [...allAnimals];
       newAnimals = shuffle(newAnimals);
       setAllAnimals(newAnimals);
-      let newPlaces = [...allPlaces];
-      newPlaces = shuffle(newPlaces);
-      setAllPlaces(newPlaces);
+      let newFootprints = [...allFootprints];
+      newFootprints = shuffle(newFootprints);
+      setAllFootprints(newFootprints);
     }
   }, [stage])
 
@@ -73,13 +73,13 @@ const WhoLivesWhere = () => {
 
   const hanldeCorrect = (id) => {
     const newAnimals = allAnimals.filter(animal => animal.id !== id);
-    const newPlaces = allPlaces.filter(place => place.id !== id);
+    const newFootprints = allFootprints.filter(place => place.id !== id);
     const newCorrectAnimals = allAnimals.filter(animal => animal.id === id);
-    const newCorrectPlaces = allPlaces.filter(place => place.id === id);
+    const newCorrectFootprints = allFootprints.filter(place => place.id === id);
     setCorrectAnimals([...correctAnimals, ...newCorrectAnimals]);
-    setCorrectPlaces([...correctPlaces, ...newCorrectPlaces]);
+    setCorrectFootprints([...correctFootprints, ...newCorrectFootprints]);
     setAllAnimals(newAnimals);
-    setAllPlaces(newPlaces);
+    setAllFootprints(newFootprints);
     setAnswerType(1);
     drawMasha();
     setCurrentPlace(0);
@@ -101,9 +101,9 @@ const WhoLivesWhere = () => {
   return (
     <CardBlock style={{minHeight: '100vh'}}>
       <Title style={{ width: 'fit-content', margin: 'auto' }}>
-        Кто, где живет?
+        Чьи следы?
       </Title>
-      <Card style={{ width: '100%', background: '#fac5f1d5' }}>
+      <Card style={{ width: '100%',  background: '#fac5f1d5' }}>
         <CardBody >
           {stage === 3
             ? < React.Fragment>
@@ -147,11 +147,11 @@ const WhoLivesWhere = () => {
                   )}
                 </Col>
                 <Col sm='5'>
-                  {allPlaces.map(place => {
+                  {allFootprints.map(place => {
                     return (
                       <Row key={'place' + place.id} className='mb-3'>
                         <CardBlock>
-                          <Text>{place.name}</Text>
+                          <Text>{place.name || <pre> </pre>}</Text>
                           <StyledImg
                             selected={place.id === currentPlace}
                             onClick={() => { setCurrentPlace(place.id) }}
@@ -161,11 +161,11 @@ const WhoLivesWhere = () => {
                     )
                   }
                   )}
-                  {correctPlaces.map(place => {
+                  {correctFootprints.map(place => {
                     return (
                       <Row key={'place' + place.id} className='mb-3'>
                         <CardBlock>
-                          <Text>{place.name}</Text>
+                          <Text>{place.name || <pre> </pre>}</Text>
                           <StyledImg
                             disabled
                             src={place.src} />
@@ -196,4 +196,4 @@ const WhoLivesWhere = () => {
   )
 }
 
-export default WhoLivesWhere
+export default WhoseFootprints

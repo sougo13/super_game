@@ -99,3 +99,54 @@ export const places2 = [
     name: 'Чаща леса'
   }
 ]
+
+export const footprints1 = [
+  {
+    id: 1,
+    src: '../photos/footprints/1.jpg',
+    name: ''
+  },
+  {
+    id: 2,
+    src: '../photos/footprints/2.jpg',
+    name: ''
+  },
+  {
+    id: 3,
+    src: '../photos/footprints/3.jpg',
+    name: ''
+  },
+  {
+    id: 4,
+    src: '../photos/footprints/4.jpg',
+    name: ''
+  }
+]
+
+export const footprints2 = [
+  {
+    id: 5,
+    src: '../photos/footprints/5.jpg',
+    name: ''
+  },
+  {
+    id: 6,
+    src: '../photos/footprints/6.jpg',
+    name: ''
+  },
+  {
+    id: 7,
+    src: '../photos/footprints/7.jpg',
+    name: ''
+  },
+  {
+    id: 8,
+    src: '../photos/footprints/8.jpg',
+    name: ''
+  },
+  {
+    id: 9,
+    src: '../photos/footprints/9.jpg',
+    name: ''
+  }
+]

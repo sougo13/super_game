@@ -1,4 +1,3 @@
-import { Button } from "reactstrap";
 import styled from "styled-components";
 
 export const CardBlock = styled.div`
@@ -55,16 +54,9 @@ export const EndMessage = styled.div`
   position: fixed;
   right: 30px;
   bottom: 300px;
-  width: 300px;
   height: auto;
   color: white;
   text-shadow: 4px 4px black;
-  @media(max-width: 1439px){
-    width: 240px;
-  }
-  @media(max-width: 1200px){
-    width: 192px;
-  }
 `
 
 export const MiniMashaImg = styled.img`
@@ -160,4 +152,14 @@ export const Autor = styled.div`
   color: white;
   font-size: 18px;
   background-color: #878787b2;
+`
+
+export const MainMenuButton = styled.img`
+  padding: 0 10px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  cursor: pointer;
+  width: 100px;
+  height: auto;
 `
