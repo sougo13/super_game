@@ -23,6 +23,7 @@ export const Title = styled.div`
   font-size: 60px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: bold;
+  text-align: center;
 `
 
 export const StyledImg = styled.img`
@@ -87,6 +88,11 @@ export const MashaImg = styled.img`
     width: 192px;
     right: 75px;
   }
+`
+
+export const MashaGame = styled.img`
+  height: 400px;
+  width: auto;
 `
 
 export const MashaMain = styled.img`
@@ -162,4 +168,5 @@ export const MainMenuButton = styled.img`
   cursor: pointer;
   width: 100px;
   height: auto;
+  z-index: 999999;
 `

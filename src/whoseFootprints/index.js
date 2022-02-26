@@ -151,7 +151,7 @@ const WhoseFootprints = () => {
                     return (
                       <Row key={'place' + place.id} className='mb-3'>
                         <CardBlock>
-                          <Text>{place.name || <pre> </pre>}</Text>
+                          <Text>{place.name || '...'}</Text>
                           <StyledImg
                             selected={place.id === currentPlace}
                             onClick={() => { setCurrentPlace(place.id) }}
@@ -165,7 +165,7 @@ const WhoseFootprints = () => {
                     return (
                       <Row key={'place' + place.id} className='mb-3'>
                         <CardBlock>
-                          <Text>{place.name || <pre> </pre>}</Text>
+                          <Text>{place.name || '...'}</Text>
                           <StyledImg
                             disabled
                             src={place.src} />
