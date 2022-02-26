@@ -49,6 +49,120 @@ export const animals2 = [
   }
 ]
 
+export const animalsCount1 = [
+  {
+    id: 1,
+    src: '../photos/animalsCount/1.jpg',
+    count: '5'
+  },
+  {
+    id: 2,
+    src: '../photos/animalsCount/2.jpg',
+    count: '1'
+  },
+  {
+    id: 3,
+    src: '../photos/animalsCount/3.jpg',
+    count: '2'
+  },
+  {
+    id: 4,
+    src: '../photos/animalsCount/4.jpg',
+    count: '2'
+  },
+  {
+    id: 5,
+    src: '../photos/animalsCount/5.jpg',
+    count: '1'
+  },
+  {
+    id: 6,
+    src: '../photos/animalsCount/6.jpg',
+    count: '5'
+  },
+  {
+    id: 7,
+    src: '../photos/animalsCount/7.jpg',
+    count: '5'
+  },
+  {
+    id: 8,
+    src: '../photos/animalsCount/8.jpg',
+    count: '2'
+  },
+  {
+    id: 9,
+    src: '../photos/animalsCount/9.jpg',
+    count: '1'
+  },
+  {
+    id: 10,
+    src: '../photos/animalsCount/10.jpg',
+    count: '1'
+  },
+  {
+    id: 11,
+    src: '../photos/animalsCount/11.jpg',
+    count: '2'
+  },
+  {
+    id: 12,
+    src: '../photos/animalsCount/12.jpg',
+    count: '5'
+  }
+]
+
+export const childrens1 = [
+  {
+    id: 1,
+    src: '../photos/childrens/1.jpg',
+    name: 'Кабанёнок'
+  },
+  {
+    id: 2,
+    src: '../photos/childrens/2.jpg',
+    name: 'Бобрёнок'
+  },
+  {
+    id: 3,
+    src: '../photos/childrens/3.jpg',
+    name: 'Медвежонок'
+  },
+  {
+    id: 4,
+    src: '../photos/childrens/4.jpg',
+    name: 'Барсучонок'
+  }
+]
+
+export const childrens2 = [
+  {
+    id: 5,
+    src: '../photos/childrens/5.jpg',
+    name: 'Лисёнок'
+  },
+  {
+    id: 6,
+    src: '../photos/childrens/6.jpg',
+    name: 'Ежонок'
+  },
+  {
+    id: 7,
+    src: '../photos/childrens/7.jpg',
+    name: 'Белчонок'
+  },
+  {
+    id: 8,
+    src: '../photos/childrens/8.jpg',
+    name: 'Волчонок'
+  },
+  {
+    id: 9,
+    src: '../photos/childrens/9.jpg',
+    name: 'Лосёнок'
+  }
+]
+
 export const places1 = [
   {
     id: 1,

@@ -5,6 +5,8 @@ import WhoLivesWhere from './whoLivesWhere';
 import { Autor, MainMenuButton } from './styled';
 import WhoseFootprints from './whoseFootprints';
 import Nature from './nature';
+import BabyAnimals from './babyAnimals';
+import AnimalsCount from './animalsCount';
 
 export const GameContext = createContext();
 
@@ -15,10 +17,9 @@ const defaultContextValue = {
 function App() {
 
   const [context, setContext] = useState(defaultContextValue);
-  console.log(context)
   return (
     <GameContext.Provider value={[context, setContext]}>
-      <div style={{ width: '100%', height: '100%', backgroundImage: 'url(../photos/grass1.jpg)', backgroundSize: '100% 100%' }}>
+      <div style={{ width: '100%', height: '100%', backgroundImage: 'url(../photos/grass1.jpg)', backgroundSize: '100%', backgroundRepeat: 'repeat' }}>
         <MainMenuButton
           src='./photos/mainMenu.png'
           onClick={() => setContext({
@@ -30,8 +31,8 @@ function App() {
             {context.currentGameId === 1 ? <Nature /> : null}
             {context.currentGameId === 2 ? <WhoLivesWhere /> : null}
             {context.currentGameId === 3 ? <WhoseFootprints /> : null}
-            {context.currentGameId === 4 ? <Menu /> : null}
-            {context.currentGameId === 5 ? <Menu /> : null}
+            {context.currentGameId === 4 ? <AnimalsCount /> : null}
+            {context.currentGameId === 5 ? <BabyAnimals /> : null}
           </Col>
         </CardBody>
         <Autor>

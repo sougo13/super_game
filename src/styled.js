@@ -38,7 +38,7 @@ export const StyledImg = styled.img`
   :hover{
     transform: ${props => props.disabled ? 'none' : 'scale(1.05)'};
   }
-  @media(max-width: 1439px){
+  @media(max-width: 1440px){
     width: 352px;
     height: 232px;
   }
@@ -66,7 +66,7 @@ export const MiniMashaImg = styled.img`
   bottom: 0;
   width: 300px;
   height: auto;
-  @media(max-width: 1439px){
+  @media(max-width: 1440px){
     width: 240px;
   }
   @media(max-width: 1200px){
@@ -80,7 +80,7 @@ export const MashaImg = styled.img`
   bottom: 0;
   width: 300px;
   height: auto;
-  @media(max-width: 1439px){
+  @media(max-width: 1440px){
     width: 240px;
     right: 90px;
   }
@@ -90,9 +90,31 @@ export const MashaImg = styled.img`
   }
 `
 
+export const MashaOkWrong = styled.img`
+  position: fixed;
+  right: 0px;
+  bottom: 0;
+  width: 400px;
+  height: auto;
+  @media(max-width: 1440px){
+    width: 350px;
+    right: 40px;
+  }
+  @media(max-width: 1200px){
+    width: 300px;
+    right: 35px;
+  }
+`
+
 export const MashaGame = styled.img`
-  height: 400px;
+  height: 300px;
   width: auto;
+  @media(max-width: 1440px){
+    height: 250px;
+  }
+  @media(max-width: 1120px){
+    height: 200px;
+  }
 `
 
 export const MashaMain = styled.img`
@@ -104,7 +126,7 @@ export const MashaMain = styled.img`
   @media(max-width: 1600px){
     width: 550px;
   }
-  @media(max-width: 1439px){
+  @media(max-width: 1440px){
     width: 450px;
   }
   @media(max-width: 1200px){
@@ -118,7 +140,7 @@ export const AnswerImg = styled.img`
   bottom: 250px;
   width: 250px;
   height: auto;
-  @media(max-width: 1439px){
+  @media(max-width: 1440px){
     width: 200px;
     right: 0;
   }
@@ -141,7 +163,7 @@ export const StyledButton = styled.button`
     background-color: lightgreen;
     color: black;
   }
-  @media(max-width: 1439px){
+  @media(max-width: 1440px){
     font-size: 40px;
   }
   @media(max-width: 1200px){

@@ -29,6 +29,7 @@ const WhoseFootprints = () => {
   const [stage, setStage] = useState(1);
   const [masha, setMasha] = useState(false);
   const [answerType, setAnswerType] = useState(0);
+  const [timer, setTimer] = useState(null);
 
   useEffect(() => {
     if (stage === 1 && allAnimals.length === 0) {
@@ -82,22 +83,28 @@ const WhoseFootprints = () => {
     setAllFootprints(newFootprints);
     setAnswerType(1);
     drawMasha();
+    setCurrentAnimal(0);
     setCurrentPlace(0);
   }
 
   const hanldeWrong = () => {
     setAnswerType(0);
     drawMasha();
+    setCurrentAnimal(0);
     setCurrentPlace(0);
   }
 
   const drawMasha = () => {
+    if (timer) {
+      clearTimeout(timer);
+    }
     setMasha(true);
-    setTimeout(() => {
+    const tmp = setTimeout(() => {
       setMasha(false);
     }, 5000)
+    setTimer(tmp);
   }
-
+  
   return (
     <CardBlock style={{minHeight: '100vh'}}>
       <Title style={{ width: 'fit-content', margin: 'auto' }}>
